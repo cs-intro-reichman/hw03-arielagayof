@@ -1,4 +1,3 @@
-/** String processing exercise 1. */
 public class LowerCase {
     public static void main(String[] args) {  
         String str = args[0];
@@ -11,7 +10,15 @@ public class LowerCase {
     * Non-letter characters are left as is.
     */
     public static String lowerCase(String s) {
-        // Replace the following statement with your code
-        return null;
+        String ans = "";
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            // If the character is an upper-case letter, converts it to lower-case
+            if ('A' <= c && c <='Z') {
+                c = (char)(c + 32);
+            }
+            ans += c;
+        }
+        return ans;
     }
 }
